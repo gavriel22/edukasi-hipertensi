@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Keamanan = () => (
+const Panduan = () => (
   <div className="container">
     <h1>Penggunaan yang Tepat</h1>
     <div className="card-grid">
@@ -31,4 +31,4 @@ const Keamanan = () => (
   </div>
 );
 
-export default Keamanan;
+export default Panduan;

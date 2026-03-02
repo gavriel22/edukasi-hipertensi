@@ -18,17 +18,12 @@ const FAQ = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Ganti nomor ini dengan nomor WhatsApp yang dituju (pakai kode negara tanpa +)
-    // Contoh: 6281234567890
     const phoneNumber = '6285326378976';
 
-    // Format pesan yang akan dikirim
     const message = `Halo, saya memiliki pertanyaan dari web Edukasi Hipertensi:\n\n*Nama:* ${formData.nama}\n*Email:* ${formData.email}\n*Pertanyaan:* ${formData.pesan}`;
 
-    // Encode pesan agar bisa digunakan di URL
     const encodedMessage = encodeURIComponent(message);
 
-    // Buka link WhatsApp API di tab baru
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
 

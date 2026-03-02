@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Diuretik from './pages/Diuretik';
 import Herbal from './pages/Herbal';
-import Keamanan from './pages/Keamanan';
+import Panduan from './pages/Panduan';
 import Pencegahan from './pages/Pencegahan';
 import FAQ from './pages/FAQ';
 
@@ -35,7 +35,7 @@ function App() {
           <Link to="/" onClick={closeMenu}>Beranda</Link>
           <Link to="/diuretik" onClick={closeMenu}>Medis</Link>
           <Link to="/herbal" onClick={closeMenu}>Herbal</Link>
-          <Link to="/keamanan" onClick={closeMenu}>Keamanan</Link>
+          <Link to="/panduan" onClick={closeMenu}>Panduan</Link>
           <Link to="/pencegahan" onClick={closeMenu}>Pencegahan</Link>
           <Link to="/faq" onClick={closeMenu}>FAQ</Link>
         </div>
@@ -45,7 +45,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/diuretik" element={<Diuretik />} />
         <Route path="/herbal" element={<Herbal />} />
-        <Route path="/keamanan" element={<Keamanan />} />
+        <Route path="/panduan" element={<Panduan />} />
         <Route path="/pencegahan" element={<Pencegahan />} />
         <Route path="/faq" element={<FAQ />} />
       </Routes>

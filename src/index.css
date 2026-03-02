@@ -337,7 +337,7 @@ footer {
   align-items: flex-end;
 }
 
-.footer-section > div {
+.footer-section>div {
   width: 100%;
   max-width: 280px;
 }
@@ -452,16 +452,24 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    padding: 40px 20px;
   }
 
   .footer-section {
     flex: 1 1 100%;
     width: 100%;
+    align-items: center;
+  }
+
+  .footer-section>div {
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
   }
 
   .footer-section:nth-child(1),
   .footer-section:nth-child(2),
   .footer-section:nth-child(3) {
-    text-align: center;
+    align-items: center;
   }
 }
