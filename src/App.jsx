@@ -53,21 +53,27 @@ function App() {
       <footer>
         <div className="footer-content">
           <div className="footer-section">
-            <h4>Telenursing Hipertensi</h4>
-            <p>Edukasi obat medis dan tradisional untuk membantu Anda mengontrol tekanan darah secara aman.</p>
+            <div>
+              <h4>Telenursing Hipertensi</h4>
+              <p>Edukasi obat medis dan tradisional untuk membantu Anda mengontrol tekanan darah secara aman.</p>
+            </div>
           </div>
           <div className="footer-section">
-            <h4>Tautan Cepat</h4>
-            <ul>
-              <li><Link to="/">Beranda</Link></li>
-              <li><Link to="/diuretik">Obat Medis</Link></li>
-              <li><Link to="/herbal">Terapi Herbal</Link></li>
-              <li><Link to="/faq">Pusat Bantuan (FAQ)</Link></li>
-            </ul>
+            <div>
+              <h4>Tautan Cepat</h4>
+              <ul>
+                <li><Link to="/">Beranda</Link></li>
+                <li><Link to="/diuretik">Obat Medis</Link></li>
+                <li><Link to="/herbal">Terapi Herbal</Link></li>
+                <li><Link to="/faq">Pusat Bantuan (FAQ)</Link></li>
+              </ul>
+            </div>
           </div>
           <div className="footer-section">
-            <h4>Peringatan Medis</h4>
-            <p>Informasi pada situs ini bersifat edukasi. Selalu konsultasikan dengan dokter sebelum mengubah rejimen pengobatan Anda.</p>
+            <div>
+              <h4>Peringatan Medis</h4>
+              <p>Informasi pada situs ini bersifat edukasi. Selalu konsultasikan dengan dokter sebelum mengubah rejimen pengobatan Anda.</p>
+            </div>
           </div>
         </div>
         <div className="footer-bottom">
