@@ -47,55 +47,8 @@ const FAQ = () => {
         </div>
       </div>
 
-      {/* Profil Penyusun Section (Full Width, No Container) */}
-      <div style={{ padding: '20px 0 60px 0' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '40px', fontSize: '2.2rem', color: 'var(--text-color)' }}>Tim Penyusun</h2>
-
-        {/* Full width flex container with no max-width constraints */}
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          gap: '40px',
-          padding: '0 5%',
-          width: '100%'
-        }}>
-          {[1, 2, 3, 4, 5].map((item, idx) => (
-            <div key={idx} style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              width: '160px',
-              textAlign: 'center'
-            }}>
-              <div style={{
-                width: '130px',
-                height: '130px',
-                background: 'linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%)',
-                borderRadius: '50%',
-                marginBottom: '20px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#64748b',
-                border: '4px solid white',
-                boxShadow: '0 10px 20px -5px rgba(0, 0, 0, 0.1)',
-                overflow: 'hidden'
-              }}>
-                <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <h3 style={{ margin: '0 0 8px 0', fontSize: '1.2rem', color: 'var(--text-color)', fontWeight: '600' }}>Anggota Tim {item}</h3>
-              <p style={{ margin: 0, color: 'var(--primary)', fontSize: '0.9rem', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '1px' }}>Penyusun</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="container" style={{ marginTop: '0', paddingTop: '0' }}>
-        <hr style={{ margin: '0 0 60px 0', border: 'none', borderTop: '1px solid var(--border-color)' }} />
+        <hr style={{ margin: '40px 0 60px 0', border: 'none', borderTop: '1px solid var(--border-color)' }} />
 
         {/* Existing FAQ Content */}
         <div style={{
