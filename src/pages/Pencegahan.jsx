@@ -16,13 +16,29 @@ const imagePlaceholderStyle = {
   cursor: 'pointer',
   transition: 'all 0.3s ease'
 };
+import hipokalemiaImg from '../assets/images/Hipokalemia.jpeg';
+import hiponatremiaImg from '../assets/images/Hiponatremia.jpeg';
+import dehidrasiImg from '../assets/images/Dehidrasi.jpeg';
+import hiperurisemiaImg from '../assets/images/Hiperurisemia.jpeg';
+import gularDarahNaikImg from '../assets/images/GulaDarahNaik.jpeg';
 
-const gridStyle = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-  gap: '24px',
-  margin: '20px 0 50px 0'
-};
+import gangguanPencernaanImg from '../assets/images/GangguanPencernaan.jpeg';
+import reaksiAlergiImg from '../assets/images/ReaksiAlergi.jpeg';
+import risikoToksisitasImg from '../assets/images/RisikoToksisitas.jpeg';
+
+const efekSampingDiuretikData = [
+  { nama: 'Hipokalemia', img: hipokalemiaImg },
+  { nama: 'Hiponatremia', img: hiponatremiaImg },
+  { nama: 'Dehidrasi', img: dehidrasiImg },
+  { nama: 'Hiperurisemia', img: hiperurisemiaImg },
+  { nama: 'Gula Darah Naik', img: gularDarahNaikImg }
+];
+
+const efekSampingHerbalData = [
+  { nama: 'Gangguan Pencernaan', img: gangguanPencernaanImg },
+  { nama: 'Reaksi Alergi', img: reaksiAlergiImg },
+  { nama: 'Risiko Toksisitas', img: risikoToksisitasImg }
+];
 
 const preventionItemStyle = {
   background: 'var(--surface-solid)',
@@ -49,7 +65,7 @@ const Pencegahan = () => (
 
     {/* Prevention List */}
     <h2 style={{ textAlign: 'center', marginBottom: '30px', fontSize: '2rem' }}>Upaya Pencegahan</h2>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px', marginBottom: '80px' }}>
+    <div className="responsive-grid-large" style={{ gap: '20px', marginBottom: '80px' }}>
 
       <div className="card" style={preventionItemStyle}>
         <div style={{ fontSize: '2.5rem', background: '#EAF7F0', padding: '15px', borderRadius: '12px' }}>🥗</div>
@@ -112,30 +128,18 @@ const Pencegahan = () => (
       <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Efek Samping Diuretik</h3>
     </div>
 
-    <div style={gridStyle}>
-      {['Hipokalemia', 'Hiponatremia', 'Dehidrasi', 'Hiperurisemia', 'Gula Darah Naik'].map((efek, idx) => (
+    <div className="responsive-grid-small" style={{ margin: '20px 0 50px 0' }}>
+      {efekSampingDiuretikData.map((efek, idx) => (
         <div key={idx} className="card" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-          {/* Image Placeholder */}
-          <div style={imagePlaceholderStyle}
-            onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = '#e2e8f0';
-              e.currentTarget.style.borderColor = 'var(--primary)';
-              e.currentTarget.style.color = 'var(--primary)';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.backgroundColor = '#f1f5f9';
-              e.currentTarget.style.borderColor = '#cbd5e1';
-              e.currentTarget.style.color = '#94a3b8';
-            }}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px' }}>
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-              <circle cx="8.5" cy="8.5" r="1.5" />
-              <polyline points="21 15 16 10 5 21" />
-            </svg>
-            Tambah Foto
-          </div>
-          <h4 style={{ margin: 0, color: 'var(--text-color)', fontSize: '1.1rem' }}>{efek}</h4>
+          <img src={efek.img} alt={efek.nama} style={{
+            width: '100%',
+            aspectRatio: '1',
+            objectFit: 'cover',
+            borderRadius: '12px',
+            marginBottom: '16px',
+            boxShadow: 'var(--shadow-sm)'
+          }} />
+          <h4 style={{ margin: 0, color: 'var(--text-color)', fontSize: '1.1rem' }}>{efek.nama}</h4>
         </div>
       ))}
     </div>
@@ -145,30 +149,18 @@ const Pencegahan = () => (
       <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Efek Samping Herbal</h3>
     </div>
 
-    <div style={gridStyle}>
-      {['Gangguan Pencernaan', 'Reaksi Alergi', 'Risiko Toksisitas'].map((efek, idx) => (
+    <div className="responsive-grid-small" style={{ margin: '20px 0 50px 0' }}>
+      {efekSampingHerbalData.map((efek, idx) => (
         <div key={idx} className="card" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-          {/* Image Placeholder */}
-          <div style={imagePlaceholderStyle}
-            onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = '#e2e8f0';
-              e.currentTarget.style.borderColor = 'var(--primary)';
-              e.currentTarget.style.color = 'var(--primary)';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.backgroundColor = '#f1f5f9';
-              e.currentTarget.style.borderColor = '#cbd5e1';
-              e.currentTarget.style.color = '#94a3b8';
-            }}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px' }}>
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-              <circle cx="8.5" cy="8.5" r="1.5" />
-              <polyline points="21 15 16 10 5 21" />
-            </svg>
-            Tambah Foto
-          </div>
-          <h4 style={{ margin: 0, color: 'var(--text-color)', fontSize: '1.1rem' }}>{efek}</h4>
+          <img src={efek.img} alt={efek.nama} style={{
+            width: '100%',
+            aspectRatio: '1',
+            objectFit: 'cover',
+            borderRadius: '12px',
+            marginBottom: '16px',
+            boxShadow: 'var(--shadow-sm)'
+          }} />
+          <h4 style={{ margin: 0, color: 'var(--text-color)', fontSize: '1.1rem' }}>{efek.nama}</h4>
         </div>
       ))}
     </div>

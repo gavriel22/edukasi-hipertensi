@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import hipertensiImg from '../assets/images/Hipertensi.jpg';
+import backgroundIMG from '../assets/images/Background.jpg';
 
 const Home = () => (
   <div>
     <header className="hero" style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(${hipertensiImg})`,
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(${backgroundIMG})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
@@ -18,6 +18,13 @@ const Home = () => (
         <Link to="/diuretik" className="animate-fade-in-up delay-300" style={{ display: 'inline-block' }}><button className="btn">Pelajari Sekarang</button></Link>
       </div>
     </header>
+    
+    <section className="container" style={{ margin: '60px auto', textAlign: 'center', maxWidth: '800px' }}>
+      <h2 className="animate-fade-in-up" style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Apa itu TensiWise?</h2>
+      <p className="animate-fade-in-up delay-100" style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--text-muted)' }}>
+        <strong>TensiWise</strong> merupakan sebuah platform edukasi telenursing yang dirancang khusus untuk membantu Anda memahami, mengelola, dan mencegah hipertensi secara bijaksana. Melalui panduan medis dan pendekatan terapi herbal yang terpercaya, kami mendampingi langkah Anda menuju tekanan darah yang lebih terkontrol dan hidup yang lebih sehat.
+      </p>
+    </section>
 
     <section className="container" style={{ marginBottom: '60px' }}>
       <h2 className="animate-fade-in-up" style={{ textAlign: 'left', marginBottom: '10px' }}>Kenapa Ini Penting?</h2>

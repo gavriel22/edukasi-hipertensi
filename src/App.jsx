@@ -6,6 +6,7 @@ import Herbal from './pages/Herbal';
 import Panduan from './pages/Panduan';
 import Pencegahan from './pages/Pencegahan';
 import FAQ from './pages/FAQ';
+import Logo from './assets/images/TensiWise.png';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +22,10 @@ function App() {
   return (
     <Router>
       <nav className="navbar">
-        <span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Telenursing</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <img src={Logo} alt="TensiWise Logo" style={{ height: '40px', width: 'auto' }} />
+          <span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>TensiWise</span>
+        </div>
         <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Navigation">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
             {menuOpen ? (
@@ -37,7 +41,7 @@ function App() {
           <Link to="/herbal" onClick={closeMenu}>Herbal</Link>
           <Link to="/panduan" onClick={closeMenu}>Panduan</Link>
           <Link to="/pencegahan" onClick={closeMenu}>Pencegahan</Link>
-          <Link to="/faq" onClick={closeMenu}>FAQ</Link>
+          <Link to="/faq" onClick={closeMenu}>Tentang Kami</Link>
         </div>
       </nav>
 
@@ -59,13 +63,13 @@ function App() {
             </div>
           </div>
           <div className="footer-section">
-            <div>
+            <div style={{ textAlign: 'center' }}>
               <h4>Tautan Cepat</h4>
-              <ul>
+              <ul style={{ padding: 0, listStyle: 'none' }}>
                 <li><Link to="/">Beranda</Link></li>
                 <li><Link to="/diuretik">Obat Medis</Link></li>
                 <li><Link to="/herbal">Terapi Herbal</Link></li>
-                <li><Link to="/faq">Pusat Bantuan (FAQ)</Link></li>
+                <li><Link to="/faq">Tentang Kami</Link></li>
               </ul>
             </div>
           </div>

@@ -623,3 +623,44 @@ footer {
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+/* Responsive Grid Utilities Added */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 20px;
+}
+
+.responsive-grid-large {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  gap: 30px;
+}
+
+.responsive-grid-small {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+  gap: 24px;
+}
+
+/* Adjust sizes for small mobile screens further if needed */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 20px 12px;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .responsive-grid,
+  .responsive-grid-large,
+  .responsive-grid-small {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
