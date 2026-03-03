@@ -18,7 +18,7 @@ const FAQ = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const phoneNumber = '6285326378976';
+    const phoneNumber = '6281254825084';
 
     const message = `Halo, saya memiliki pertanyaan dari web Edukasi Hipertensi:\n\n*Nama:* ${formData.nama}\n*Email:* ${formData.email}\n*Pertanyaan:* ${formData.pesan}`;
 
