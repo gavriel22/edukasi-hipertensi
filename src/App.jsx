@@ -63,7 +63,7 @@ function App() {
             </div>
           </div>
           <div className="footer-section">
-            <div style={{ textAlign: 'center' }}>
+            <div>
               <h4>Tautan Cepat</h4>
               <ul style={{ padding: 0, listStyle: 'none' }}>
                 <li><Link to="/">Beranda</Link></li>

@@ -18,7 +18,7 @@ const Home = () => (
         <Link to="/diuretik" className="animate-fade-in-up delay-300" style={{ display: 'inline-block' }}><button className="btn">Pelajari Sekarang</button></Link>
       </div>
     </header>
-    
+
     <section className="container" style={{ margin: '60px auto', textAlign: 'center', maxWidth: '800px' }}>
       <h2 className="animate-fade-in-up" style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Apa itu TensiWise?</h2>
       <p className="animate-fade-in-up delay-100" style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--text-muted)' }}>
@@ -81,10 +81,14 @@ const Home = () => (
         maxWidth: '900px',
         width: '100%'
       }}>
-        <video controls width="100%" style={{ maxHeight: '550px', display: 'block', borderRadius: '16px' }}>
-          <source src="/barasuara.mp4" type="video/mp4" />
-          Maaf, browser Anda tidak mendukung pemutaran video.
-        </video>
+        <iframe
+          width="100%"
+          style={{ height: '550px', display: 'block', borderRadius: '16px', border: 'none' }}
+          src="https://www.youtube.com/embed/Trus8InNnyc"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
       </div>
     </div>
 
