@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Diuretik from './pages/Diuretik';
 import Herbal from './pages/Herbal';
 import Panduan from './pages/Panduan';
 import Pencegahan from './pages/Pencegahan';
 import FAQ from './pages/FAQ';
+import Risiko from './pages/Risiko';
 import Logo from './assets/images/TensiWise.png';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,6 +32,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <nav className="navbar">
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <img src={Logo} alt="TensiWise Logo" style={{ height: '40px', width: 'auto' }} />
@@ -41,6 +53,7 @@ function App() {
           <Link to="/herbal" onClick={closeMenu}>Herbal</Link>
           <Link to="/panduan" onClick={closeMenu}>Panduan</Link>
           <Link to="/pencegahan" onClick={closeMenu}>Pencegahan</Link>
+          <Link to="/risiko" onClick={closeMenu}>Risiko</Link>
           <Link to="/faq" onClick={closeMenu}>Tentang Kami</Link>
         </div>
       </nav>
@@ -51,6 +64,7 @@ function App() {
         <Route path="/herbal" element={<Herbal />} />
         <Route path="/panduan" element={<Panduan />} />
         <Route path="/pencegahan" element={<Pencegahan />} />
+        <Route path="/risiko" element={<Risiko />} />
         <Route path="/faq" element={<FAQ />} />
       </Routes>
 

@@ -28,12 +28,12 @@ const Diuretik = () => (
 
     <div className="container" style={{ marginTop: '0', paddingTop: '0' }}>
       <div className="card-grid" style={{ marginBottom: '40px' }}>
-        <div className="card" style={{ gridColumn: 'span 2' }}>
+        <div className="card" style={{ gridColumn: '1 / -1' }}>
           <h3 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <span style={{ display: 'inline-flex', justifyContent: 'center', alignItems: 'center', width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(31, 122, 92, 0.1)' }}>🎯</span>
             Fungsi Utama Obat Diuretik
           </h3>
-          <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '15px' }}>
+          <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '10px', marginTop: '15px' }}>
             <li>Menurunkan volume plasma & curah jantung</li>
             <li>Mengurangi resistensi vaskular perifer</li>
             <li>Menurunkan tekanan dinding arteri</li>
@@ -44,21 +44,19 @@ const Diuretik = () => (
             *Pengendalian tekanan darah yang adekuat menurunkan risiko gagal jantung secara signifikan.
           </p>
         </div>
-
-        <div className="card" style={{ gridColumn: 'span 2', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <h3 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span style={{ display: 'inline-flex', justifyContent: 'center', alignItems: 'center', width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(31, 122, 92, 0.1)' }}>💊</span>
-            Jenis Diuretik Utama
-          </h3>
-          <div style={{ display: 'flex', gap: '15px', marginTop: '20px', flexWrap: 'wrap' }}>
-            <span style={{ padding: '8px 16px', background: 'var(--section-alternate)', color: 'var(--primary)', borderRadius: '20px', fontWeight: '500' }}>Thiazide</span>
-            <span style={{ padding: '8px 16px', background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', borderRadius: '20px', fontWeight: '500' }}>Loop (Diuretik Kuat)</span>
-            <span style={{ padding: '8px 16px', background: 'rgba(245, 158, 11, 0.1)', color: '#d97706', borderRadius: '20px', fontWeight: '500' }}>Kalium-sparing</span>
-          </div>
-        </div>
       </div>
 
-      <h2 style={{ textAlign: 'center', marginBottom: '30px', fontSize: '2rem' }}>Detail Golongan Obat</h2>
+      <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '20px', fontSize: '2rem' }}>
+          <span style={{ display: 'inline-flex', justifyContent: 'center', alignItems: 'center', width: '40px', height: '40px', borderRadius: '10px', background: 'rgba(31, 122, 92, 0.1)' }}>💊</span>
+          Jenis & Detail Golongan Diuretik Utama
+        </h2>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', flexWrap: 'wrap' }}>
+          <span style={{ padding: '8px 16px', background: 'var(--section-alternate)', color: 'var(--primary)', borderRadius: '20px', fontWeight: '500' }}>Thiazide</span>
+          <span style={{ padding: '8px 16px', background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', borderRadius: '20px', fontWeight: '500' }}>Loop (Diuretik Kuat)</span>
+          <span style={{ padding: '8px 16px', background: 'rgba(245, 158, 11, 0.1)', color: '#d97706', borderRadius: '20px', fontWeight: '500' }}>Kalium-sparing</span>
+        </div>
+      </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
 

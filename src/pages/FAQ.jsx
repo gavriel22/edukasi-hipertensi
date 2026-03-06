@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import logoImg from '../assets/images/LOGO.png';
+import feliciaImg from '../assets/images/FeliciaYoanSugiarto.jpeg';
+import inesImg from '../assets/images/InesSuryaNingtyas.jpeg';
+import shofiyaImg from '../assets/images/ShofiyaRamadhani.jpeg';
+import yurikeImg from '../assets/images/YurikeDaroLuenPanamuant.jpeg';
+import sefnatImg from '../assets/images/SefnatDeyal.jpeg';
+import fianeImg from '../assets/images/Ners Fiane de Fretes, S.Kep, MAN., Sp. KMB.jpeg';
 
 const FAQ = () => {
   const [formData, setFormData] = useState({
@@ -49,6 +55,57 @@ const FAQ = () => {
 
       <div className="container" style={{ marginTop: '0', paddingTop: '0' }}>
         <hr style={{ margin: '40px 0 60px 0', border: 'none', borderTop: '1px solid var(--border-color)' }} />
+
+        {/* Dosen Pembimbing Section */}
+        <div style={{ marginBottom: '60px' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '40px', fontSize: '2rem', color: 'var(--text-color)' }}>Dosen Pembimbing</h2>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ textAlign: 'center', width: '250px' }}>
+              <img src={fianeImg} alt="Ners Fiane de Fretes, S.Kep, MAN., Sp. KMB" style={{ width: '180px', height: '180px', objectFit: 'cover', borderRadius: '50%', marginBottom: '15px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} />
+              <h3 style={{ fontSize: '1.2rem', color: 'var(--text-color)', margin: '0 0 5px 0' }}>Ners Fiane de Fretes, S.Kep, MAN., Sp. KMB</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', margin: 0 }}>Dosen Pembimbing</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Tim Penyusun Section */}
+        <div style={{ marginBottom: '60px' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '40px', fontSize: '2rem', color: 'var(--text-color)' }}>Tim Penyusun</h2>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '40px'
+          }}>
+            {/* Baris Pertama: 3 Orang */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '40px' }}>
+              <div style={{ textAlign: 'center', width: '200px' }}>
+                <img src={feliciaImg} alt="Felicia Yoan Sugiarto" style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '50%', marginBottom: '15px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} />
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--text-color)', margin: '0 0 5px 0' }}>Felicia Yoan Sugiarto</h3>
+              </div>
+              <div style={{ textAlign: 'center', width: '200px' }}>
+                <img src={inesImg} alt="Ines Surya Ningtyas" style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '50%', marginBottom: '15px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} />
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--text-color)', margin: '0 0 5px 0' }}>Ines Surya Ningtyas</h3>
+              </div>
+              <div style={{ textAlign: 'center', width: '200px' }}>
+                <img src={shofiyaImg} alt="Shofiya Ramadhani" style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '50%', marginBottom: '15px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} />
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--text-color)', margin: '0 0 5px 0' }}>Shofiya Ramadhani</h3>
+              </div>
+            </div>
+            
+            {/* Baris Kedua: 2 Orang (Yurike & Sefnat) */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '40px' }}>
+              <div style={{ textAlign: 'center', width: '200px' }}>
+                <img src={yurikeImg} alt="Yurike Daro Luen Panamuant" style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '50%', marginBottom: '15px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} />
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--text-color)', margin: '0 0 5px 0' }}>Yurike Daro Luen Panamuant</h3>
+              </div>
+              <div style={{ textAlign: 'center', width: '200px' }}>
+                <img src={sefnatImg} alt="Sefnat Deyal" style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '50%', marginBottom: '15px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} />
+                <h3 style={{ fontSize: '1.2rem', color: 'var(--text-color)', margin: '0 0 5px 0' }}>Sefnat Deyal</h3>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Existing FAQ Content */}
         <div style={{
