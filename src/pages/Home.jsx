@@ -64,65 +64,100 @@ const Home = () => {
   return (
     <div>
       <header className="hero" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(${backgroundIMG})`,
+        backgroundImage: `linear-gradient(rgba(31, 122, 92, 0.6), rgba(17, 89, 65, 0.8)), url(${backgroundIMG})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        color: '#ffffff'
+        color: '#ffffff',
+        position: 'relative'
       }}>
+        {/* Animated Background Elements */}
+        <div className="bg-blob bg-blob-secondary animate-pulse-slow" style={{ width: '400px', height: '400px', top: '10%', left: '-10%' }}></div>
+        <div className="bg-blob bg-blob-secondary animate-float" style={{ width: '300px', height: '300px', bottom: '20%', right: '-5%' }}></div>
+        <div className="bg-blob bg-blob-accent animate-float-delayed" style={{ width: '250px', height: '250px', top: '30%', right: '20%' }}></div>
+
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <span className="animate-fade-in-up" style={{ display: 'inline-block', background: 'var(--primary-glow)', border: '1px solid var(--secondary)', padding: '6px 16px', borderRadius: '30px', color: '#ffffff', fontSize: '0.9rem', fontWeight: '600', letterSpacing: '0.02em', marginBottom: '1rem', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>Edukasi Obat Medis & Tradisional untuk Hipertensi</span>
+          <span className="animate-fade-in-up" style={{ display: 'inline-block', background: 'var(--primary-glow)', border: '1px solid var(--secondary)', padding: '6px 16px', borderRadius: '30px', color: '#ffffff', fontSize: '0.9rem', fontWeight: '600', letterSpacing: '0.02em', marginBottom: '1rem', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>
+            Edukasi Obat Medis & Tradisional untuk Hipertensi
+          </span>
           <h1 className="animate-fade-in-up delay-100" style={{ marginTop: '15px', color: '#ffffff' }}>Minum Obat Hipertensi Sudah Tepat?</h1>
           <p className="animate-fade-in-up delay-200" style={{ color: '#ffffff' }}>Pahami penggunaan diuretik dan herbal dalam membantu mengontrol tekanan darah secara aman dan efektif.</p>
-          <Link to="/diuretik" className="animate-fade-in-up delay-300" style={{ display: 'inline-block' }}><button className="btn">Pelajari Sekarang</button></Link>
+          <Link to="/diuretik" className="animate-fade-in-up delay-300" style={{ display: 'inline-block' }}>
+            <button className="btn animate-pulse-slow">Pelajari Sekarang</button>
+          </Link>
+        </div>
+
+        {/* SVG Wave Divider */}
+        <div className="wave-divider">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.93,197.36,97.71C244.3,82.01,283.43,65.34,321.39,56.44Z" fill="var(--bg-top)"></path>
+          </svg>
         </div>
       </header>
 
-      <section className="container" style={{ margin: '60px auto', textAlign: 'center', maxWidth: '800px' }}>
-        <h2 className="animate-fade-in-up" style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Apa itu TensiWise?</h2>
-        <p className="animate-fade-in-up delay-100" style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--text-muted)' }}>
+      <section className="container" style={{ margin: '60px auto', textAlign: 'center', maxWidth: '800px', position: 'relative' }}>
+        {/* Background decorative blob */}
+        <div className="bg-blob bg-blob-primary animate-spin-slow" style={{ width: '500px', height: '500px', top: '-100px', left: '50%', transform: 'translateX(-50%)' }}></div>
+
+        <h2 className="animate-fade-in-up" style={{ fontSize: '2.5rem', marginBottom: '20px', position: 'relative', zIndex: 1 }}>Apa itu TensiWise?</h2>
+        <p className="animate-fade-in-up delay-100" style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--text-muted)', position: 'relative', zIndex: 1 }}>
           <strong>TensiWise</strong> merupakan sebuah platform edukasi telenursing yang dirancang khusus untuk membantu Anda memahami, mengelola, dan mencegah hipertensi secara bijaksana. Melalui panduan medis dan pendekatan terapi herbal yang terpercaya, kami mendampingi langkah Anda menuju tekanan darah yang lebih terkontrol dan hidup yang lebih sehat.
         </p>
       </section>
 
-      <section className="container" style={{ marginBottom: '60px' }}>
-        <h2 className="animate-fade-in-up" style={{ textAlign: 'left', marginBottom: '10px' }}>Kenapa Ini Penting?</h2>
-        <p className="animate-fade-in-up delay-100" style={{ textAlign: 'left', marginBottom: '40px', color: 'var(--text-muted)' }}>Hipertensi sering kali tidak menimbulkan gejala, namun dapat menyebabkan komplikasi serius jika tidak terkontrol dengan baik.</p>
+      <section className="container" style={{ marginBottom: '60px', position: 'relative' }}>
+        <div className="bg-blob bg-blob-accent animate-float" style={{ width: '400px', height: '400px', right: '-10%', top: '20%' }}></div>
 
-        <div className="card-grid">
-          <div className="card animate-fade-in-up delay-100">
-            <h3>Apa itu Hipertensi?</h3>
-            <p style={{ color: 'var(--text-muted)' }}>Hipertensi sering kali tidak menimbulkan gejala mencolok, namun diam-diam memicu kerusakan organ vital tanpa peringatan.</p>
-          </div>
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <h2 className="animate-fade-in-up" style={{ textAlign: 'left', marginBottom: '10px' }}>Kenapa Ini Penting?</h2>
+          <p className="animate-fade-in-up delay-100" style={{ textAlign: 'left', marginBottom: '40px', color: 'var(--text-muted)' }}>Hipertensi sering kali tidak menimbulkan gejala, namun dapat menyebabkan komplikasi serius jika tidak terkontrol dengan baik.</p>
 
-          <div className="card animate-fade-in-up delay-200" style={{ backgroundColor: 'var(--primary)', color: '#ffffff', border: 'none' }}>
-            <h3 style={{ color: '#ffffff' }}>Gejala Hipertensi</h3>
-            <ul style={{ margin: 0, paddingLeft: '20px', color: 'rgba(255, 255, 255, 0.9)' }}>
-              <li>Sakit kepala</li>
-              <li>Pusing/kepala terasa berat</li>
-              <li>Gangguan penglihatan</li>
-              <li>Jantung berdebar</li>
-              <li>Mimisan</li>
-              <li>Mudah lelah/lemah</li>
-              <li>Sesak napas</li>
-            </ul>
-          </div>
+          <div className="card-grid">
+            <div className="card animate-fade-in-up delay-100" style={{ position: 'relative' }}>
+              <span className="animate-float" style={{ position: 'absolute', top: '-15px', right: '-15px', fontSize: '3rem', opacity: 0.2 }}>❓</span>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ fontSize: '1.5rem' }}>🧐</span> Apa itu Hipertensi?
+              </h3>
+              <p style={{ color: 'var(--text-muted)' }}>Hipertensi sering kali tidak menimbulkan gejala mencolok, namun diam-diam memicu kerusakan organ vital tanpa peringatan.</p>
+            </div>
 
-          <div className="card animate-fade-in-up delay-300">
-            <h3>Penyebab Utama</h3>
-            <ul style={{ color: 'var(--text-muted)', margin: 0, paddingLeft: '20px' }}>
-              <li>Konsumsi garam (natrium) berlebih</li>
-              <li>Obesitas</li>
-              <li>Kurang aktivitas fisik</li>
-              <li>Stres dan merokok</li>
-              <li>Penyakit ginjal kronis</li>
-              <li>Gangguan Hormonal</li>
-            </ul>
-          </div>
+            <div className="card animate-fade-in-up delay-200" style={{ backgroundColor: 'var(--primary)', color: '#ffffff', border: 'none', position: 'relative' }}>
+              <span className="animate-float-delayed" style={{ position: 'absolute', top: '-15px', right: '-15px', fontSize: '3rem', opacity: 0.15 }}>🩺</span>
+              <h3 style={{ color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ fontSize: '1.5rem' }}>⚠️</span> Gejala Hipertensi
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: '20px', color: 'rgba(255, 255, 255, 0.9)' }}>
+                <li>Sakit kepala</li>
+                <li>Pusing/kepala terasa berat</li>
+                <li>Gangguan penglihatan</li>
+                <li>Jantung berdebar</li>
+                <li>Mimisan</li>
+                <li>Mudah lelah/lemah</li>
+                <li>Sesak napas</li>
+              </ul>
+            </div>
 
-          <div className="card animate-fade-in-up delay-400" style={{ backgroundColor: 'var(--primary)', color: '#ffffff', border: 'none' }}>
-            <h3 style={{ color: '#ffffff' }}>Pentingnya Terapi</h3>
-            <p style={{ color: 'rgba(255, 255, 255, 0.9)' }}>Dengan pengobatan seperti Diuretik dan gaya hidup sehat, tekanan darah yang mematikan dapat dikendalikan sepenuhnya.</p>
+            <div className="card animate-fade-in-up delay-300" style={{ position: 'relative' }}>
+              <span className="animate-float" style={{ position: 'absolute', top: '-15px', right: '-15px', fontSize: '3rem', opacity: 0.15 }}>🍔</span>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ fontSize: '1.5rem' }}>🎯</span> Penyebab Utama
+              </h3>
+              <ul style={{ color: 'var(--text-muted)', margin: 0, paddingLeft: '20px' }}>
+                <li>Konsumsi garam berlebih</li>
+                <li>Obesitas & Kurang gerak</li>
+                <li>Stres dan merokok</li>
+                <li>Penyakit ginjal kronis</li>
+                <li>Gangguan Hormonal</li>
+              </ul>
+            </div>
+
+            <div className="card animate-fade-in-up delay-400" style={{ backgroundColor: 'var(--primary)', color: '#ffffff', border: 'none', position: 'relative' }}>
+              <span className="animate-float-delayed" style={{ position: 'absolute', top: '-15px', right: '-15px', fontSize: '3rem', opacity: 0.15 }}>💊</span>
+              <h3 style={{ color: '#ffffff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ fontSize: '1.5rem' }}>🛡️</span> Pentingnya Terapi
+              </h3>
+              <p style={{ color: 'rgba(255, 255, 255, 0.9)' }}>Dengan pengobatan seperti Diuretik dan gaya hidup sehat, tekanan darah yang mematikan dapat dikendalikan sepenuhnya.</p>
+            </div>
           </div>
         </div>
       </section>

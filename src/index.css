@@ -620,8 +620,88 @@ footer {
   animation-delay: 400ms;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 15s linear infinite;
+}
+
 .animate-float {
   animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Background Decorations */
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: -1;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.bg-blob-primary {
+  background: radial-gradient(circle, rgba(31, 122, 92, 0.4) 0%, rgba(31, 122, 92, 0) 70%);
+}
+
+.bg-blob-secondary {
+  background: radial-gradient(circle, rgba(169, 223, 191, 0.5) 0%, rgba(169, 223, 191, 0) 70%);
+}
+
+.bg-blob-accent {
+  background: radial-gradient(circle, rgba(52, 152, 219, 0.3) 0%, rgba(52, 152, 219, 0) 70%);
+}
+
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: translateY(1px);
+  /* Fix horizontal gap */
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
 }
 
 /* Responsive Grid Utilities Added */
@@ -720,9 +800,11 @@ footer {
     padding-left: 0;
     margin-top: 15px;
   }
+
   .smart-check-title {
     font-size: 2rem;
   }
+
   .smart-check-desc {
     font-size: 1.05rem;
   }
