@@ -157,16 +157,7 @@ const Home = () => {
 
       {/* Smart Check Section */}
       <div className="container" style={{ marginBottom: '100px', padding: '0 20px' }}>
-        <div style={{
-          background: 'linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)',
-          borderRadius: '32px',
-          padding: '50px',
-          boxShadow: '0 20px 40px -10px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.05)',
-          maxWidth: '900px',
-          margin: '0 auto',
-          position: 'relative',
-          overflow: 'hidden'
-        }}>
+        <div className="smart-check-container">
           {/* Decorative Background Elements */}
           <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '200px', height: '200px', background: 'radial-gradient(circle, rgba(31,122,92,0.05) 0%, rgba(255,255,255,0) 70%)', borderRadius: '50%' }}></div>
           <div style={{ position: 'absolute', bottom: '-50px', left: '-50px', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(31,122,92,0.03) 0%, rgba(255,255,255,0) 70%)', borderRadius: '50%' }}></div>
@@ -175,22 +166,14 @@ const Home = () => {
             <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '72px', height: '72px', borderRadius: '24px', background: 'linear-gradient(135deg, rgba(31, 122, 92, 0.1), rgba(31, 122, 92, 0.2))', color: 'var(--primary)', marginBottom: '20px', boxShadow: '0 8px 16px rgba(31, 122, 92, 0.1)' }}>
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             </div>
-            <h2 style={{ fontSize: '2.5rem', color: 'var(--text-color)', margin: '0 0 15px 0', fontWeight: '800', letterSpacing: '-0.02em' }}>Smart Check</h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', margin: 0, maxWidth: '600px', marginInline: 'auto', lineHeight: '1.6' }}>Kenali potensi risiko hipertensi Anda sedini mungkin melalui evaluasi gejala secara cepat dan terarah.</p>
+            <h2 className="smart-check-title">Smart Check</h2>
+            <p className="smart-check-desc">Kenali potensi risiko hipertensi Anda sedini mungkin melalui evaluasi gejala secara cepat dan terarah.</p>
           </div>
 
           {!scoreResult ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '35px', position: 'relative', zIndex: '1' }}>
               {smartCheckQuestions.map((q, index) => (
-                <div key={q.id} style={{
-                  background: '#fff',
-                  padding: '30px',
-                  borderRadius: '20px',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
-                  border: '1px solid rgba(0,0,0,0.05)',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                  ':hover': { transform: 'translateY(-2px)', boxShadow: '0 8px 25px rgba(0,0,0,0.05)' }
-                }}>
+                <div key={q.id} className="smart-check-card">
                   <h3 style={{ fontSize: '1.25rem', marginBottom: '25px', color: 'var(--text-color)', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
                     <span style={{
                       minWidth: '36px',
@@ -207,7 +190,7 @@ const Home = () => {
                     }}>{index + 1}</span>
                     <span style={{ paddingTop: '6px', lineHeight: '1.6', fontWeight: '600' }}>{q.question}</span>
                   </h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '15px', paddingLeft: '51px' }}>
+                  <div className="quiz-options">
                     {q.options.map(opt => {
                       const isSelected = answers[q.id] === opt.value;
                       return (
@@ -273,7 +256,7 @@ const Home = () => {
               </div>
             </div>
           ) : (
-            <div ref={resultRef} className="animate-fade-in-up" style={{ textAlign: 'center', background: '#fff', padding: '50px', borderRadius: '24px', boxShadow: '0 10px 40px rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.05)', position: 'relative', zIndex: '1' }}>
+            <div ref={resultRef} className="animate-fade-in-up smart-check-result">
               <div style={{ marginBottom: '30px' }}>
                 <h3 style={{ fontSize: '1.8rem', color: 'var(--text-color)', marginBottom: '10px', fontWeight: '700' }}>Hasil Analisis Anda</h3>
                 <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>Berdasarkan pola gejala yang Anda laporkan</p>

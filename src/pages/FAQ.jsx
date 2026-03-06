@@ -37,17 +37,10 @@ const FAQ = () => {
   return (
     <div className="animate-fade-in-up">
       {/* Hero Section for About Us */}
-      <div style={{
-        background: 'linear-gradient(135deg, var(--primary) 0%, #115941 100%)',
-        padding: '80px 20px 60px',
-        textAlign: 'center',
-        color: 'white',
-        marginBottom: '40px',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
-      }}>
+      <div className="hero-page">
         <div className="container" style={{ padding: '0' }}>
-          <h1 style={{ color: 'white', margin: '0 0 20px 0', fontSize: '3rem', textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>Tentang Kami</h1>
-          <p style={{ fontSize: '1.1rem', opacity: 0.9, maxWidth: '600px', margin: '0 auto', fontWeight: '300', lineHeight: '1.6' }}>
+          <h1 className="hero-page-title">Tentang Kami</h1>
+          <p className="hero-page-desc" style={{ maxWidth: '600px' }}>
             Kami berdedikasi untuk memberikan informasi kesehatan yang akurat dan terpercaya, khususnya mengenai penyakit hipertensi dan pengobatan diuretik.
           </p>
         </div>
@@ -92,7 +85,7 @@ const FAQ = () => {
                 <h3 style={{ fontSize: '1.2rem', color: 'var(--text-color)', margin: '0 0 5px 0' }}>Shofiya Ramadhani</h3>
               </div>
             </div>
-            
+
             {/* Baris Kedua: 2 Orang (Yurike & Sefnat) */}
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '40px' }}>
               <div style={{ textAlign: 'center', width: '200px' }}>
@@ -134,7 +127,7 @@ const FAQ = () => {
         {/* Call to Action & Form */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
           gap: '40px',
           alignItems: 'start',
           background: 'var(--surface-solid)',

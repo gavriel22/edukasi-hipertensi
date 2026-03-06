@@ -10,17 +10,10 @@ import eplerenonImg from '../assets/images/Eplerenon.jpeg';
 const Diuretik = () => (
   <div className="animate-fade-in-up">
     {/* Hero Section */}
-    <div style={{
-      background: 'linear-gradient(135deg, var(--primary) 0%, #115941 100%)',
-      padding: '80px 20px 60px',
-      textAlign: 'center',
-      color: 'white',
-      marginBottom: '40px',
-      boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
-    }}>
+    <div className="hero-page">
       <div className="container" style={{ padding: '0' }}>
-        <h1 style={{ color: 'white', margin: '0 0 20px 0', fontSize: '3rem', textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>Kenali Obat Diuretik</h1>
-        <p style={{ fontSize: '1.1rem', opacity: 0.9, maxWidth: '800px', margin: '0 auto', fontWeight: '300', lineHeight: '1.6' }}>
+        <h1 className="hero-page-title">Kenali Obat Diuretik</h1>
+        <p className="hero-page-desc">
           Diuretik merupakan terapi utama dalam pengelolaan hipertensi. Obat ini membantu tubuh mengeluarkan kelebihan natrium dan cairan melalui ginjal.
         </p>
       </div>
@@ -33,7 +26,7 @@ const Diuretik = () => (
             <span style={{ display: 'inline-flex', justifyContent: 'center', alignItems: 'center', width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(31, 122, 92, 0.1)' }}>🎯</span>
             Fungsi Utama Obat Diuretik
           </h3>
-          <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '10px', marginTop: '15px' }}>
+          <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '10px', marginTop: '15px' }}>
             <li>Menurunkan volume plasma & curah jantung</li>
             <li>Mengurangi resistensi vaskular perifer</li>
             <li>Menurunkan tekanan dinding arteri</li>
@@ -58,7 +51,7 @@ const Diuretik = () => (
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '30px' }}>
 
         {/* Thiazide */}
         <div className="card herbal-card" style={{ borderTop: '4px solid var(--primary)', display: 'flex', flexDirection: 'column' }}>

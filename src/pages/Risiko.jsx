@@ -7,17 +7,10 @@ const Risiko = () => {
     return (
         <div className="animate-fade-in-up">
             {/* Hero Section */}
-            <div style={{
-                background: 'linear-gradient(135deg, var(--primary) 0%, #115941 100%)',
-                padding: '80px 20px 60px',
-                textAlign: 'center',
-                color: 'white',
-                marginBottom: '40px',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
-            }}>
+            <div className="hero-page">
                 <div className="container" style={{ padding: '0' }}>
-                    <h1 style={{ color: 'white', margin: '0 0 20px 0', fontSize: '3rem', textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>Risiko & Komplikasi Hipertensi</h1>
-                    <p style={{ fontSize: '1.2rem', opacity: 0.9, maxWidth: '700px', margin: '0 auto', fontWeight: '300', lineHeight: '1.6' }}>
+                    <h1 className="hero-page-title">Risiko & Komplikasi Hipertensi</h1>
+                    <p className="hero-page-desc" style={{ maxWidth: '700px' }}>
                         Hipertensi yang tidak terkontrol dapat merusak organ-organ vital di tubuh kita.
                         Mari kenali bahaya dan komplikasi utamanya agar kita lebih waspada.
                     </p>
@@ -47,12 +40,12 @@ const Risiko = () => {
                     <div style={{ position: 'absolute', top: 0, left: 0, width: '8px', height: '100%', background: 'linear-gradient(to bottom, #ef4444, #f87171)' }}></div>
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', alignItems: 'center' }}>
-                        <div style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center' }}>
+                        <div className="flex-item-300" style={{ display: 'flex', justifyContent: 'center' }}>
                             <div style={{ position: 'relative', padding: '10px', background: '#fef2f2', borderRadius: '24px', width: '100%' }}>
                                 <img src={heartImg} alt="Ilustrasi Gagal Jantung" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 8px 25px rgba(239, 68, 68, 0.15)', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} />
                             </div>
                         </div>
-                        <div style={{ flex: '1 1 400px', paddingRight: '20px' }}>
+                        <div className="flex-item-400" style={{ paddingRight: '20px' }}>
                             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '6px 16px', background: '#fef2f2', color: '#ef4444', borderRadius: '30px', fontSize: '0.9rem', fontWeight: '600', marginBottom: '15px' }}>
                                 <span style={{ fontSize: '1.2rem' }}>🫀</span> Komplikasi Kardiovaskular
                             </div>
@@ -95,7 +88,7 @@ const Risiko = () => {
                     <div style={{ position: 'absolute', top: 0, right: 0, width: '8px', height: '100%', background: 'linear-gradient(to bottom, #8b5cf6, #a78bfa)' }}></div>
 
                     <div style={{ display: 'flex', flexWrap: 'wrap-reverse', gap: '40px', alignItems: 'center' }}>
-                        <div style={{ flex: '1 1 400px', paddingLeft: '20px' }}>
+                        <div className="flex-item-400" style={{ paddingLeft: '20px' }}>
                             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '6px 16px', background: '#f5f3ff', color: '#8b5cf6', borderRadius: '30px', fontSize: '0.9rem', fontWeight: '600', marginBottom: '15px' }}>
                                 <span style={{ fontSize: '1.2rem' }}>🧠</span> Komplikasi Serebrovaskular
                             </div>
@@ -106,12 +99,34 @@ const Risiko = () => {
                             <p style={{ color: 'var(--text-muted)', lineHeight: '1.8', marginBottom: '30px', fontSize: '1.05rem' }}>
                                 Kondisi ini dapat menyebabkan terbentuknya sumbatan yang memicu <strong style={{ color: 'var(--text-color)' }}>stroke iskemik</strong> atau bahkan pecahnya pembuluh darah yang menyebabkan <strong style={{ color: 'var(--text-color)' }}>stroke hemoragik</strong>.
                             </p>
-                            <a href="https://doi.org/10.30574/wjarr.2024.21.1.0204" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', fontSize: '0.95rem', borderRadius: '12px', borderColor: '#8b5cf6', color: '#8b5cf6' }}>
+                            <a href="https://doi.org/10.30574/wjarr.2024.21.1.0204" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', fontSize: '0.95rem', borderRadius: '12px', borderColor: '#8b5cf6', color: '#8b5cf6', marginBottom: '30px' }}>
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                                 Baca Referensi Lebih Lanjut
                             </a>
+
+                            {/* Embedded YouTube Video */}
+                            <div style={{
+                                width: '100%',
+                                borderRadius: '16px',
+                                overflow: 'hidden',
+                                boxShadow: '0 8px 25px rgba(139, 92, 246, 0.15)',
+                                background: '#000',
+                                border: '4px solid #f5f3ff',
+                            }}>
+                                <iframe
+                                    width="100%"
+                                    height="315"
+                                    src="https://www.youtube.com/embed/0Qjob61OP68"
+                                    title="YouTube video player"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                    style={{ display: 'block' }}
+                                ></iframe>
+                            </div>
                         </div>
-                        <div style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center' }}>
+                        <div className="flex-item-300" style={{ display: 'flex', justifyContent: 'center' }}>
                             <div style={{ position: 'relative', padding: '10px', background: '#f5f3ff', borderRadius: '24px', width: '100%' }}>
                                 <img src={strokeImg} alt="Ilustrasi Stroke" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 8px 25px rgba(139, 92, 246, 0.15)', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} />
                             </div>
@@ -140,12 +155,12 @@ const Risiko = () => {
                     <div style={{ position: 'absolute', top: 0, left: 0, width: '8px', height: '100%', background: 'linear-gradient(to bottom, #eab308, #fef08a)' }}></div>
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', alignItems: 'center' }}>
-                        <div style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center' }}>
+                        <div className="flex-item-300" style={{ display: 'flex', justifyContent: 'center' }}>
                             <div style={{ position: 'relative', padding: '10px', background: '#fefce8', borderRadius: '24px', width: '100%' }}>
                                 <img src={kidneyImg} alt="Ilustrasi Gagal Ginjal" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 8px 25px rgba(234, 179, 8, 0.15)', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} />
                             </div>
                         </div>
-                        <div style={{ flex: '1 1 400px', paddingRight: '20px' }}>
+                        <div className="flex-item-400" style={{ paddingRight: '20px' }}>
                             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '6px 16px', background: '#fefce8', color: '#ca8a04', borderRadius: '30px', fontSize: '0.9rem', fontWeight: '600', marginBottom: '15px' }}>
                                 <span style={{ fontSize: '1.2rem' }}>🩺</span> Komplikasi Ginjal
                             </div>
