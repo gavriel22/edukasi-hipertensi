@@ -80,7 +80,7 @@ const Home = () => {
           <span className="animate-fade-in-up" style={{ display: 'inline-block', background: 'var(--primary-glow)', border: '1px solid var(--secondary)', padding: '6px 16px', borderRadius: '30px', color: '#ffffff', fontSize: '0.9rem', fontWeight: '600', letterSpacing: '0.02em', marginBottom: '1rem', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>
             Edukasi Obat Medis & Tradisional untuk Hipertensi
           </span>
-          <h1 className="animate-fade-in-up delay-100" style={{ marginTop: '15px', color: '#ffffff' }}>Minum Obat Hipertensi Sudah Tepat?</h1>
+          <h1 className="hero-page-title animate-fade-in-up delay-100" style={{ marginTop: '15px' }}>Minum Obat Hipertensi Sudah Tepat?</h1>
           <p className="animate-fade-in-up delay-200" style={{ color: '#ffffff' }}>Pahami penggunaan diuretik dan herbal dalam membantu mengontrol tekanan darah secara aman dan efektif.</p>
           <Link to="/diuretik" className="animate-fade-in-up delay-300" style={{ display: 'inline-block' }}>
             <button className="btn animate-pulse-slow">Pelajari Sekarang</button>

@@ -49,11 +49,11 @@ function App() {
         </button>
         <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <Link to="/" onClick={closeMenu}>Beranda</Link>
+          <Link to="/risiko" onClick={closeMenu}>Risiko</Link>
           <Link to="/diuretik" onClick={closeMenu}>Medis</Link>
           <Link to="/herbal" onClick={closeMenu}>Herbal</Link>
           <Link to="/panduan" onClick={closeMenu}>Panduan</Link>
           <Link to="/pencegahan" onClick={closeMenu}>Pencegahan</Link>
-          <Link to="/risiko" onClick={closeMenu}>Risiko</Link>
           <Link to="/faq" onClick={closeMenu}>Tentang Kami</Link>
         </div>
       </nav>
