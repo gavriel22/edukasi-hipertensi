@@ -54,16 +54,16 @@ const FAQ = () => {
             <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '50px' }}>
               <div style={{ textAlign: 'center', width: '250px' }} className="team-card">
                 <div style={{ padding: '8px', background: 'linear-gradient(135deg, var(--primary), var(--secondary))', borderRadius: '50%', display: 'inline-block', marginBottom: '20px' }}>
-                  <img src={fianeImg} alt="Ners Fiane de Fretes, S.Kep, MAN., Sp. KMB" style={{ width: '180px', height: '180px', objectFit: 'cover', borderRadius: '50%', border: '4px solid white' }} />
+                  <img src={catherineImg} alt="Ners Catherine Natawirarindry, S. Kep" style={{ width: '180px', height: '180px', objectFit: 'cover', borderRadius: '50%', border: '4px solid white' }} />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', color: 'var(--text-color)', margin: '0 0 8px 0', fontWeight: '700' }}>Ners Fiane de Fretes, S.Kep, MAN., Sp. KMB</h3>
+                <h3 style={{ fontSize: '1.25rem', color: 'var(--text-color)', margin: '0 0 8px 0', fontWeight: '700' }}>Ners Catherine Natawirarindry, S. Kep</h3>
                 <p style={{ color: 'var(--primary)', fontSize: '0.95rem', margin: 0, fontWeight: '600' }}>Dosen Pembimbing Utama</p>
               </div>
               <div style={{ textAlign: 'center', width: '250px' }} className="team-card">
                 <div style={{ padding: '8px', background: 'linear-gradient(135deg, var(--primary), var(--secondary))', borderRadius: '50%', display: 'inline-block', marginBottom: '20px' }}>
-                  <img src={catherineImg} alt="Ners Catherine Natawirarindry, S. Kep" style={{ width: '180px', height: '180px', objectFit: 'cover', borderRadius: '50%', border: '4px solid white' }} />
+                  <img src={fianeImg} alt="Ners Fiane de Fretes, S.Kep, MAN., Sp. KMB" style={{ width: '180px', height: '180px', objectFit: 'cover', borderRadius: '50%', border: '4px solid white' }} />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', color: 'var(--text-color)', margin: '0 0 8px 0', fontWeight: '700' }}>Ners Catherine Natawirarindry, S. Kep</h3>
+                <h3 style={{ fontSize: '1.25rem', color: 'var(--text-color)', margin: '0 0 8px 0', fontWeight: '700' }}>Ners Fiane de Fretes, S.Kep, MAN., Sp. KMB</h3>
                 <p style={{ color: 'var(--primary)', fontSize: '0.95rem', margin: 0, fontWeight: '600' }}>Dosen Pembimbing Pendamping</p>
               </div>
             </div>
@@ -73,7 +73,7 @@ const FAQ = () => {
 
           {/* Tim Penyusun Section */}
           <div style={{ marginBottom: '40px', textAlign: 'center' }}>
-            <div style={{ display: 'inline-block', padding: '8px 20px', background: '#f5f3ff', color: '#8b5cf6', borderRadius: '30px', fontWeight: 'bold', marginBottom: '15px' }}>Mahasiswa Peneliti</div>
+            <div style={{ display: 'inline-block', padding: '8px 20px', background: '#f5f3ff', color: '#8b5cf6', borderRadius: '30px', fontWeight: 'bold', marginBottom: '15px' }}>Tim Penyusun</div>
             <h2 style={{ fontSize: '2.5rem', margin: '0 0 50px 0', fontWeight: '800' }}>Tim Penyusun</h2>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', maxWidth: '1000px', margin: '0 auto' }}>
