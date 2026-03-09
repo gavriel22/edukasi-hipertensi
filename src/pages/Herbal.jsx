@@ -77,68 +77,90 @@ const Herbal = () => {
   const activeHerbal = herbalData.find(item => item.id === activeModalId);
 
   return (
-    <div className="animate-fade-in-up">
-      {/* Hero Section */}
-      <div className="hero-page">
-        <div className="container" style={{ padding: '0' }}>
-          <h1 className="hero-page-title">Herbal Pendamping Terapi</h1>
-          <p className="hero-page-desc">
-            Selain terapi medis, beberapa tanaman herbal juga digunakan sebagai pendamping dalam membantu mengontrol tekanan darah. Klik gambar di bawah ini untuk melihat detailnya.
-          </p>
-        </div>
-      </div>
-
-      <div className="container" style={{ marginTop: '0', paddingTop: '0' }}>
-
-        <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', margin: '40px 0' }}>
-          {herbalData.map((item) => (
-            <div
-              key={item.id}
-              className="card herbal-card"
-              onClick={() => setActiveModalId(item.id)}
-              style={{ cursor: 'pointer', textAlign: 'center', padding: '16px' }}
-            >
-              <img
-                src={item.img}
-                alt={item.name}
-                style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: '12px', marginBottom: '16px' }}
-              />
-              <h3>{item.name}</h3>
-              <p style={{ color: 'var(--primary)', fontWeight: '500', margin: '0' }}>Klik untuk detail</p>
-            </div>
-          ))}
-        </div>
-
-        <p style={{ textAlign: 'center' }}>Tanaman-tanaman tersebut mengandung senyawa aktif seperti antioksidan yang dapat membantu mendukung kesehatan sistem kardiovaskular.</p>
-        <div className="alert">
-          <strong>Penting:</strong> Herbal digunakan sebagai pendamping, bukan pengganti obat medis. Selalu konsultasikan dengan dokter sebelum mengonsumsi herbal secara rutin.
-        </div>
-
-        {activeHerbal && (
-          <div className="modal-overlay" onClick={() => setActiveModalId(null)}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <button className="modal-close" onClick={() => setActiveModalId(null)}>&times;</button>
-              <img
-                src={activeHerbal.img}
-                alt={activeHerbal.name}
-                style={{ width: '100%', maxHeight: '250px', objectFit: 'cover', borderRadius: '12px', marginBottom: '20px' }}
-              />
-              <h2 style={{ marginTop: 0, color: 'var(--primary)', marginBottom: '4px' }}>Khasiat {activeHerbal.name}</h2>
-              <p style={{ fontStyle: 'italic', fontSize: '0.9rem', margin: '0 0 16px 0', opacity: 0.8 }}>{activeHerbal.scientific}</p>
-              <p>{activeHerbal.desc}</p>
-              <ul style={{ textAlign: 'left', margin: '16px 0' }}>
-                {activeHerbal.benefits.map((benefit, idx) => (
-                  <li key={idx} style={{ marginBottom: '8px' }}>
-                    <strong>{benefit.title}:</strong> {benefit.text}
-                  </li>
-                ))}
-              </ul>
-              <p style={{ fontSize: '0.9rem', opacity: 0.8, marginTop: '20px' }}>* {activeHerbal.note}</p>
-            </div>
+    <>
+      <div className="animate-fade-in-up">
+        {/* Hero Section */}
+        <div className="hero-page">
+          <div className="container" style={{ padding: '0' }}>
+            <h1 className="hero-page-title">Herbal Pendamping Terapi</h1>
+            <p className="hero-page-desc">
+              Selain terapi medis, beberapa tanaman herbal juga digunakan sebagai pendamping dalam membantu mengontrol tekanan darah. Klik gambar di bawah ini untuk melihat detailnya.
+            </p>
           </div>
-        )}
+        </div>
+
+        <div className="container" style={{ marginTop: '0', paddingTop: '0' }}>
+
+          <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', margin: '40px 0' }}>
+            {herbalData.map((item) => (
+              <div
+                key={item.id}
+                className="card herbal-card"
+                onClick={() => setActiveModalId(item.id)}
+                style={{ cursor: 'pointer', textAlign: 'center', padding: '16px' }}
+              >
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: '12px', marginBottom: '16px' }}
+                />
+                <h3>{item.name}</h3>
+                <p style={{ color: 'var(--primary)', fontWeight: '500', margin: '0' }}>Klik untuk detail</p>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ textAlign: 'center' }}>Tanaman-tanaman tersebut mengandung senyawa aktif seperti antioksidan yang dapat membantu mendukung kesehatan sistem kardiovaskular.</p>
+          <div className="alert">
+            <strong>Penting:</strong> Herbal digunakan sebagai pendamping, bukan pengganti obat medis. Selalu konsultasikan dengan dokter sebelum mengonsumsi herbal secara rutin.
+          </div>
+        </div>
       </div>
-    </div>
+
+      {activeHerbal && (
+        <div className="modal-overlay" onClick={() => setActiveModalId(null)} style={{ zIndex: 9999 }}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ position: 'relative', background: '#fff' }}>
+            <button
+              className="modal-close"
+              onClick={() => setActiveModalId(null)}
+              style={{
+                position: 'absolute',
+                top: '15px',
+                right: '20px',
+                background: '#f1f5f9',
+                border: 'none',
+                borderRadius: '50%',
+                width: '32px',
+                height: '32px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                color: '#475569',
+                fontSize: '20px',
+                zIndex: 10
+              }}
+            >&times;</button>
+            <img
+              src={activeHerbal.img}
+              alt={activeHerbal.name}
+              style={{ width: '100%', maxHeight: '250px', objectFit: 'cover', borderRadius: '12px', marginBottom: '20px', marginTop: '10px' }}
+            />
+            <h2 style={{ marginTop: 0, color: 'var(--primary)', marginBottom: '4px' }}>Khasiat {activeHerbal.name}</h2>
+            <p style={{ fontStyle: 'italic', fontSize: '0.9rem', margin: '0 0 16px 0', opacity: 0.8 }}>{activeHerbal.scientific}</p>
+            <p>{activeHerbal.desc}</p>
+            <ul style={{ textAlign: 'left', margin: '16px 0' }}>
+              {activeHerbal.benefits.map((benefit, idx) => (
+                <li key={idx} style={{ marginBottom: '8px' }}>
+                  <strong>{benefit.title}:</strong> {benefit.text}
+                </li>
+              ))}
+            </ul>
+            <p style={{ fontSize: '0.9rem', opacity: 0.8, marginTop: '20px' }}>* {activeHerbal.note}</p>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

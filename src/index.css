@@ -723,9 +723,71 @@ footer {
   gap: 24px;
 }
 
+/* Full Width Sections for Immersive Layouts */
+.section-full {
+  padding: 80px 5%;
+  width: 100%;
+}
+
+.section-white {
+  background-color: #ffffff;
+}
+
+.section-light {
+  background-color: var(--section-alternate);
+}
+
+.split-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.split-content {
+  flex: 1 1 400px;
+}
+
+.split-media {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.split-media img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.split-media img:hover {
+  transform: translateY(-10px);
+}
+
+.image-blob-bg::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 110%;
+  background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
 /* Page Hero section */
 .hero-page {
-  background: linear-gradient(135deg, var(--primary) 0%, #115941 100%);
+  background: linear-gradient(rgba(31, 122, 92, 0.7), rgba(17, 89, 65, 0.9)), url('./assets/images/Background.jpg');
+  background-size: cover;
+  background-position: center;
   padding: 80px 20px 60px;
   text-align: center;
   color: white;

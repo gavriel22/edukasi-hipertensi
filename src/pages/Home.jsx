@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import backgroundIMG from '../assets/images/Background.jpg';
+import tensiWiseImg from '../assets/images/TensiWise.png';
+import hipertensiImg from '../assets/images/Hipertensi.jpg';
 
 const smartCheckQuestions = [
   { id: 1, question: "Seberapa sering Anda mengalami sakit kepala (terutama di bagian belakang kepala)?", options: [{ label: "A. Tidak pernah", value: 1 }, { label: "B. Jarang (1–2 kali dalam sebulan)", value: 2 }, { label: "C. Sering (1–2 kali dalam seminggu)", value: 3 }, { label: "D. Sangat sering (hampir setiap hari)", value: 4 }] },
@@ -99,8 +101,10 @@ const Home = () => {
         {/* Background decorative blob */}
         <div className="bg-blob bg-blob-primary animate-spin-slow" style={{ width: '500px', height: '500px', top: '-100px', left: '50%', transform: 'translateX(-50%)' }}></div>
 
-        <h2 className="animate-fade-in-up" style={{ fontSize: '2.5rem', marginBottom: '20px', position: 'relative', zIndex: 1 }}>Apa itu TensiWise?</h2>
-        <p className="animate-fade-in-up delay-100" style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--text-muted)', position: 'relative', zIndex: 1 }}>
+        <img src={tensiWiseImg} alt="Logo TensiWise" className="animate-fade-in-up" style={{ width: '220px', height: 'auto', marginBottom: '20px', position: 'relative', zIndex: 1, filter: 'drop-shadow(0 10px 15px rgba(31, 122, 92, 0.2))' }} />
+
+        <h2 className="animate-fade-in-up delay-100" style={{ fontSize: '2.5rem', marginBottom: '20px', position: 'relative', zIndex: 1 }}>Apa itu TensiWise?</h2>
+        <p className="animate-fade-in-up delay-200" style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--text-muted)', position: 'relative', zIndex: 1 }}>
           <strong>TensiWise</strong> merupakan sebuah platform edukasi telenursing yang dirancang khusus untuk membantu Anda memahami, mengelola, dan mencegah hipertensi secara bijaksana. Melalui panduan medis dan pendekatan terapi herbal yang terpercaya, kami mendampingi langkah Anda menuju tekanan darah yang lebih terkontrol dan hidup yang lebih sehat.
         </p>
       </section>
@@ -110,7 +114,11 @@ const Home = () => {
 
         <div style={{ position: 'relative', zIndex: 1 }}>
           <h2 className="animate-fade-in-up" style={{ textAlign: 'left', marginBottom: '10px' }}>Kenapa Ini Penting?</h2>
-          <p className="animate-fade-in-up delay-100" style={{ textAlign: 'left', marginBottom: '40px', color: 'var(--text-muted)' }}>Hipertensi sering kali tidak menimbulkan gejala, namun dapat menyebabkan komplikasi serius jika tidak terkontrol dengan baik.</p>
+          <p className="animate-fade-in-up delay-100" style={{ textAlign: 'left', marginBottom: '30px', color: 'var(--text-muted)', maxWidth: '800px' }}>Hipertensi sering kali tidak menimbulkan gejala, namun dapat menyebabkan komplikasi serius jika tidak terkontrol dengan baik.</p>
+
+          <div className="animate-fade-in-up delay-200" style={{ width: '100%', height: '350px', borderRadius: '24px', background: `url(${hipertensiImg}) center/60% no-repeat`, backgroundColor: '#f8fafc', marginBottom: '40px', boxShadow: 'inset 0 0 0 1px #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            {/* The image is used as background here. */}
+          </div>
 
           <div className="card-grid">
             <div className="card animate-fade-in-up delay-100" style={{ position: 'relative' }}>
