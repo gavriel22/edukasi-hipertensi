@@ -81,7 +81,7 @@ const FAQ = () => {
                 { name: 'Felicia Yoan Sugiarto', img: feliciaImg },
                 { name: 'Ines Surya Ningtyas', img: inesImg },
                 { name: 'Shofiya Ramadhani', img: shofiyaImg },
-                { name: 'Yurike Daro Luen P.', img: yurikeImg },
+                { name: 'Yurike Daro Iuen P.', img: yurikeImg },
                 { name: 'Sefnat Deyal', img: sefnatImg }
               ].map((member, idx) => (
                 <div key={idx} style={{ textAlign: 'center', background: '#fff', padding: '30px 20px', borderRadius: '24px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.04)', transition: 'transform 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>

@@ -126,7 +126,7 @@ const Home = () => {
               <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <span style={{ fontSize: '1.5rem' }}>🧐</span> Apa itu Hipertensi?
               </h3>
-              <p style={{ color: 'var(--text-muted)' }}>Hipertensi sering kali tidak menimbulkan gejala mencolok, namun diam-diam memicu kerusakan organ vital tanpa peringatan.</p>
+              <p style={{ color: 'var(--text-muted)' }}>keadaan seseorang yang mengalami peningkatan tekanan darah di atas normal, yaitu tekanan darah sistolik ≥ 140 mmHg dan atau tekanan darah diastolik ≥ 90 mmHg. Hipertensi merupakan “silent killer” yang dikenal sebagai penyakit kardiovaskular yang sangat umum (Khairiyah et al., 2022) <a href="https://doi.org/10.37311/jsscr.v4i3.15446" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>https://doi.org/10.37311/jsscr.v4i3.15446</a></p>
             </div>
 
             <div className="card animate-fade-in-up delay-200" style={{ backgroundColor: 'var(--primary)', color: '#ffffff', border: 'none', position: 'relative' }}>
