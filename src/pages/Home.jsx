@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import backgroundIMG from '../assets/images/Background.jpg';
 import tensiWiseImg from '../assets/images/TensiWise.png';
-import hipertensiImg from '../assets/images/Hipertensi.jpg';
 
 const smartCheckQuestions = [
   { id: 1, question: "Seberapa sering Anda mengalami sakit kepala (terutama di bagian belakang kepala)?", options: [{ label: "A. Tidak pernah", value: 1 }, { label: "B. Jarang (1–2 kali dalam sebulan)", value: 2 }, { label: "C. Sering (1–2 kali dalam seminggu)", value: 3 }, { label: "D. Sangat sering (hampir setiap hari)", value: 4 }] },
@@ -116,17 +115,17 @@ const Home = () => {
           <h2 className="animate-fade-in-up" style={{ textAlign: 'left', marginBottom: '10px' }}>Kenapa Ini Penting?</h2>
           <p className="animate-fade-in-up delay-100" style={{ textAlign: 'left', marginBottom: '30px', color: 'var(--text-muted)', maxWidth: '800px' }}>Hipertensi sering kali tidak menimbulkan gejala, namun dapat menyebabkan komplikasi serius jika tidak terkontrol dengan baik.</p>
 
-          <div className="animate-fade-in-up delay-200" style={{ width: '100%', height: '350px', borderRadius: '24px', background: `url(${hipertensiImg}) center/60% no-repeat`, backgroundColor: '#f8fafc', marginBottom: '40px', boxShadow: 'inset 0 0 0 1px #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            {/* The image is used as background here. */}
-          </div>
-
           <div className="card-grid">
             <div className="card animate-fade-in-up delay-100" style={{ position: 'relative' }}>
               <span className="animate-float" style={{ position: 'absolute', top: '-15px', right: '-15px', fontSize: '3rem', opacity: 0.2 }}>❓</span>
               <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <span style={{ fontSize: '1.5rem' }}>🧐</span> Apa itu Hipertensi?
               </h3>
-              <p style={{ color: 'var(--text-muted)' }}>keadaan seseorang yang mengalami peningkatan tekanan darah di atas normal, yaitu tekanan darah sistolik ≥ 140 mmHg dan atau tekanan darah diastolik ≥ 90 mmHg. Hipertensi merupakan “silent killer” yang dikenal sebagai penyakit kardiovaskular yang sangat umum (Khairiyah et al., 2022) <a href="https://doi.org/10.37311/jsscr.v4i3.15446" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>https://doi.org/10.37311/jsscr.v4i3.15446</a></p>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '10px' }}>keadaan seseorang yang mengalami peningkatan tekanan darah di atas normal, yaitu tekanan darah sistolik ≥ 140 mmHg dan atau tekanan darah diastolik ≥ 90 mmHg. Hipertensi merupakan “silent killer” yang dikenal sebagai penyakit kardiovaskular yang sangat umum (Khairiyah et al., 2022)</p>
+              <a href="https://doi.org/10.37311/jsscr.v4i3.15446" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: '500', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Baca Jurnal Referensi
+              </a>
             </div>
 
             <div className="card animate-fade-in-up delay-200" style={{ backgroundColor: 'var(--primary)', color: '#ffffff', border: 'none', position: 'relative' }}>
