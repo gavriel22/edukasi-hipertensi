@@ -63,7 +63,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div style={{ overflowX: 'hidden' }}>
       <header className="hero" style={{
         backgroundImage: `linear-gradient(rgba(31, 122, 92, 0.6), rgba(17, 89, 65, 0.8)), url(${backgroundIMG})`,
         backgroundSize: 'cover',
@@ -203,7 +203,7 @@ const Home = () => {
               <div style={{ fontSize: '1.5rem', fontWeight: '700', color: '#f97316', marginTop: '5px', marginLeft: '2px' }}>Jt</div>
             </div>
             <p style={{ color: 'var(--text-color)', margin: '0 0 20px 0', fontSize: '1.05rem', lineHeight: '1.6', flexGrow: 1 }}>Penduduk penderita hipertensi, menyebabkan <span style={{ fontWeight: '700', color: '#ea580c', background: '#ffedd5', padding: '2px 6px', borderRadius: '4px' }}>427.218 kematian</span>.</p>
-            <a href="http://dx.doi.org/10.33846/ghs8106" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', color: '#f97316', fontSize: '1rem', fontWeight: '700', textDecoration: 'none', borderBottom: '2px dashed #f97316', paddingBottom: '2px', alignSelf: 'center', transition: 'all 0.3s ease' }} onMouseOver={(e) => e.target.style.opacity = '0.7'} onMouseOut={(e) => e.target.style.opacity = '1'}>Lihat Jurnal Riset &rarr;</a>
+            <a href="https://doi.org/10.56338/mppki.v7i1.4047" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', color: '#f97316', fontSize: '1rem', fontWeight: '700', textDecoration: 'none', borderBottom: '2px dashed #f97316', paddingBottom: '2px', alignSelf: 'center', transition: 'all 0.3s ease' }} onMouseOver={(e) => e.target.style.opacity = '0.7'} onMouseOut={(e) => e.target.style.opacity = '1'}>Lihat Jurnal Riset &rarr;</a>
           </div>
 
           {/* Jateng Card */}
