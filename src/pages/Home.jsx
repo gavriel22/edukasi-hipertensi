@@ -169,6 +169,57 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Prevalensi Section */}
+      <section className="container" style={{ margin: '80px auto', position: 'relative', zIndex: 1 }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <h2 className="animate-fade-in-up" style={{ fontSize: '2.5rem', marginBottom: '15px', color: 'var(--text-color)', display: 'inline-flex', alignItems: 'center', gap: '12px' }}>
+            <span style={{ fontSize: '2.2rem' }}>📊</span> Fakta & Angka Hipertensi
+          </h2>
+          <p className="animate-fade-in-up delay-100" style={{ color: 'var(--text-muted)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto' }}>Hipertensi adalah tantangan kesehatan global dan nasional yang nyata. Mari kenali situasinya melalui data terbaru.</p>
+        </div>
+        
+        <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
+          {/* Global Card */}
+          <div className="card animate-fade-in-up delay-100" style={{ position: 'relative', background: 'linear-gradient(145deg, #ffffff, #f0fdf4)', border: '1px solid #bbf7d0', textAlign: 'center', padding: '35px 25px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <div style={{ position: 'absolute', top: '-20px', right: '-20px', fontSize: '8rem', opacity: 0.05, transform: 'rotate(15deg)', pointerEvents: 'none' }}>🌍</div>
+            <div style={{ background: 'var(--primary)', color: 'white', width: '70px', height: '70px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem', margin: '0 auto 20px', boxShadow: '0 8px 20px rgba(31, 122, 92, 0.3)' }}>
+              🌍
+            </div>
+            <h3 style={{ fontSize: '1.3rem', color: 'var(--text-muted)', marginBottom: '10px', fontWeight: '600' }}>Global (WHO, 2023)</h3>
+            <div style={{ fontSize: '4rem', fontWeight: '800', color: 'var(--primary)', lineHeight: '1', marginBottom: '15px', textShadow: '2px 2px 4px rgba(31, 122, 92, 0.15)' }}>33%</div>
+            <p style={{ color: 'var(--text-color)', margin: '0 0 20px 0', fontSize: '1.05rem', lineHeight: '1.6', flexGrow: 1 }}>Prevalensi orang dewasa di seluruh dunia mengalami hipertensi, dua pertiganya di negara berkembang.</p>
+            <a href="https://www.who.int/news-room/fact-sheets/detail/hypertension" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', color: 'var(--primary)', fontSize: '1rem', fontWeight: '700', textDecoration: 'none', borderBottom: '2px dashed var(--primary)', paddingBottom: '2px', alignSelf: 'center', transition: 'all 0.3s ease' }} onMouseOver={(e) => e.target.style.opacity = '0.7'} onMouseOut={(e) => e.target.style.opacity = '1'}>Baca Laporan WHO &rarr;</a>
+          </div>
+
+          {/* Indonesia Card */}
+          <div className="card animate-fade-in-up delay-200" style={{ position: 'relative', background: 'linear-gradient(145deg, #ffffff, #fff7ed)', border: '1px solid #fed7aa', textAlign: 'center', padding: '35px 25px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <div style={{ position: 'absolute', top: '-20px', right: '-20px', fontSize: '8rem', opacity: 0.05, transform: 'rotate(15deg)', pointerEvents: 'none' }}>🇮🇩</div>
+            <div style={{ background: '#f97316', color: 'white', width: '70px', height: '70px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem', margin: '0 auto 20px', boxShadow: '0 8px 20px rgba(249, 115, 22, 0.3)' }}>
+              🇮🇩
+            </div>
+            <h3 style={{ fontSize: '1.3rem', color: 'var(--text-muted)', marginBottom: '10px', fontWeight: '600' }}>Indonesia (2023)</h3>
+            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', marginBottom: '15px' }}>
+              <div style={{ fontSize: '4rem', fontWeight: '800', color: '#f97316', lineHeight: '1', textShadow: '2px 2px 4px rgba(249,115,22,0.15)' }}>63.3</div>
+              <div style={{ fontSize: '1.5rem', fontWeight: '700', color: '#f97316', marginTop: '5px', marginLeft: '2px' }}>Jt</div>
+            </div>
+            <p style={{ color: 'var(--text-color)', margin: '0 0 20px 0', fontSize: '1.05rem', lineHeight: '1.6', flexGrow: 1 }}>Penduduk penderita hipertensi, menyebabkan <span style={{ fontWeight: '700', color: '#ea580c', background: '#ffedd5', padding: '2px 6px', borderRadius: '4px' }}>427.218 kematian</span>.</p>
+            <a href="http://dx.doi.org/10.33846/ghs8106" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', color: '#f97316', fontSize: '1rem', fontWeight: '700', textDecoration: 'none', borderBottom: '2px dashed #f97316', paddingBottom: '2px', alignSelf: 'center', transition: 'all 0.3s ease' }} onMouseOver={(e) => e.target.style.opacity = '0.7'} onMouseOut={(e) => e.target.style.opacity = '1'}>Lihat Jurnal Riset &rarr;</a>
+          </div>
+
+          {/* Jateng Card */}
+          <div className="card animate-fade-in-up delay-300" style={{ position: 'relative', background: 'linear-gradient(145deg, #ffffff, #fef2f2)', border: '1px solid #fecaca', textAlign: 'center', padding: '35px 25px', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <div style={{ position: 'absolute', top: '-10px', right: '-20px', fontSize: '8rem', opacity: 0.05, transform: 'rotate(15deg)', pointerEvents: 'none' }}>📈</div>
+            <div style={{ background: '#ef4444', color: 'white', width: '70px', height: '70px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem', margin: '0 auto 20px', boxShadow: '0 8px 20px rgba(239, 68, 68, 0.3)' }}>
+              📈
+            </div>
+            <h3 style={{ fontSize: '1.3rem', color: 'var(--text-muted)', marginBottom: '10px', fontWeight: '600' }}>Jawa Tengah</h3>
+            <div style={{ fontSize: '4rem', fontWeight: '800', color: '#ef4444', lineHeight: '1', marginBottom: '15px', textShadow: '2px 2px 4px rgba(239, 68, 68, 0.15)' }}>37.5%</div>
+            <p style={{ color: 'var(--text-color)', margin: '0 0 20px 0', fontSize: '1.05rem', lineHeight: '1.6', flexGrow: 1 }}>Angka prevalensi tinggi yang didominasi oleh kelompok <span style={{ fontWeight: '700', color: '#b91c1c', background: '#fee2e2', padding: '2px 6px', borderRadius: '4px' }}>Perempuan (40.1%)</span>.</p>
+            <a href="https://www.ijmps.id/index.php/ijmps/article/download/320/42" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', color: '#ef4444', fontSize: '1rem', fontWeight: '700', textDecoration: 'none', borderBottom: '2px dashed #ef4444', paddingBottom: '2px', alignSelf: 'center', transition: 'all 0.3s ease' }} onMouseOver={(e) => e.target.style.opacity = '0.7'} onMouseOut={(e) => e.target.style.opacity = '1'}>Publikasi Data &rarr;</a>
+          </div>
+        </div>
+      </section>
+
       {/* Video Section */}
       <div style={{ textAlign: 'center', margin: '80px 0 30px' }}>
         <h2 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Video Edukasi</h2>
